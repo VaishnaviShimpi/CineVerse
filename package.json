@@ -1,10 +1,10 @@
 {
-	"name": "netflix-clone",
+	"name": "CineVerse",
 	"version": "1.0.0",
 	"description": "",
 	"main": "backend/server.js",
 	"scripts": {
-		"dev": "set NODE_ENV=development&& nodemon mern-netflix-clone/backend/server.js",
+		"dev": "set NODE_ENV=development&& nodemon backend/server.js",
 		"start": "set NODE_ENV=production&& node backend/server.js",
 		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
 	},

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^1.7.2",
+    "CineVerse": "file:..",
     "lucide-react": "^0.408.0",
     "netflix-clone": "file:..",
     "react": "^18.3.1",
