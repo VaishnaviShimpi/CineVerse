@@ -80,6 +80,7 @@ const HomeScreen = () => {
 							<Info className='size-6 mr-2' />
 							More Info
 						</Link>
+						
 					</div>
 				</div>
 			</div>

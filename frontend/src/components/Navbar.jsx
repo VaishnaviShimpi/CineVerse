@@ -34,6 +34,14 @@ const Navbar = () => {
 			</div>
 
 			<div className='flex gap-2 items-center z-50'>
+			<Link
+							to={'/HomeMovie'}
+							className='bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded flex items-center'
+						>
+							<span className='size-6 mr-2'>🎉</span>
+							Watch Party
+						</Link>
+
 				<Link to={"/search"}>
 					<Search className='size-6 cursor-pointer' />
 				</Link>

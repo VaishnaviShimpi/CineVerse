@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainWrap {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.aside {
+  background-color: black;
+  color: #fff;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.clientsList {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 10px; /* Space between client items */
+  justify-content: center;
+}
+
+.client {
+  width: 40%; /* Approximately half width to allow two clients per row */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btn {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 85%; /* Reduced button width */
+  margin-top: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.copyBtn {
+  background-color: #f81d1d;
+  color: #fff;
+}
+
+.leaveBtn {
+  background-color: #f81d1d;
+  color: #fff;
+}
+
+.recommendbtn {
+  background-color: #f81d1d;
+  color: #fff;
+}
+
+/* Hover effect for both buttons */
+.btn:hover {
+  background-color: #c71717; /* Change color to darker red on hover */
+}
+
+.editorWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 20px; /* Optional: Adjusts space between items */  
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sendButton {
+  margin-left: 5px;
+  background-color: #f81d1d;
+  color: #fff;
+}
+
+.VIDEO {
+  flex: 1; /* Ensures the video container occupies all available space */
+  position: relative;
+  height: 100%; /* Takes the full height of its parent */
+}
+
+.videoIframe {
+  width: 100%; /* Makes the iframe take the full width of the container */
+  height: 100%; /* Makes the iframe take the full height of the container */
+  border: none; /* Removes the border around the iframe */
+}
