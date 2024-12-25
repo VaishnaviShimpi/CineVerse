@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
-import { v4 as uuidV4 } from 'uuid';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const HomeMovie = () => {
     const navigate = useNavigate();
-    const [MovieName, setMovieName] = useState('');
+    const [movieName, setMovieName] = useState('');
 
-    const EnterRoom = () => {
-        if (!MovieName) {
+    const handleMovieSearch = () => {
+        if (!movieName) {
             toast.error('Movie Name is required');
             return;
         }
-        //Fetch movie src here.
-
-        navigate(`/Home`, {});
+        
+        const urlencodedMovie = encodeURIComponent(movieName);
+        console.log(`Inside HomeMovie (Moviename is ${movieName})  && (urlencoded is ${urlencodedMovie})`);
+        navigate(`/Home/${urlencodedMovie}`);
     };
 
+    const handleInputEnter = (e) => {
+        if (e.code === 'Enter') {
+            handleMovieSearch();
+        }
+    };
 
     return (
         <div style={{ backgroundColor: 'black', color: '#fff', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <style>
                 {`
                     .formWrapper {
-                        background-color:rgba(0, 0, 0, 0);
+                        background-color: rgba(0, 0, 0, 0);
                         padding: 20px;
                         border-radius: 8px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -37,24 +42,31 @@ const HomeMovie = () => {
                         background-color: white;
                         color: black;
                     }
-                    
-                    .joinBtn {
-                     background-color: red;
-                      color: white;
+                    .searchBtn {
+                        background-color: red;
+                        color: white;
+                    }
+                    .createNewBtn {
+                        color: #007bff;
+                        text-decoration: none;
                     }
                 `}
-                
             </style>
             <div className='formWrapper'>
-                <img src="/logo.png" alt="Icon" style={{alignContent: 'center', width: '200px', height: '200px' }} />
-                <h4 className='mainLabel'><b>Enter Valid Movie or Tv Show</b></h4>
+                <img src="/logo.png" alt="Icon" style={{ alignContent: 'center', width: '200px', height: '200px' }} />
+                <h4 className='mainLabel'><b>Enter Movie Name</b></h4>
                 <div className='inputGroup'>
-                    <input type="text" className='inputBox' placeholder='Enter the Name Here' onChange={(e) => setMovieName(e.target.value)}  value={MovieName}/>
-                    
-                    <button className='btn EnterBtn'  onClick={EnterRoom}>Enter</button>
+                    <input
+                        type="text"
+                        className='inputBox'
+                        placeholder='Movie Name'
+                        onChange={(e) => setMovieName(e.target.value)}
+                        value={movieName}
+                        onKeyUp={handleInputEnter}
+                    />
+                    <button className='btn searchBtn' onClick={handleMovieSearch}>Search</button>
                 </div>
             </div>
-            
         </div>
     );
 };

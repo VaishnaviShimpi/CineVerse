@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { v4 as uuidV4 } from 'uuid';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Home = () => {
+    const { movieName } = useParams();
+    const urlencodedMovie = encodeURIComponent(movieName);
     const navigate = useNavigate();
     const [roomId, setRoomId] = useState('');
     const [username, setUsername] = useState('');
@@ -20,8 +22,8 @@ const Home = () => {
             toast.error('ROOM ID and User Name is required');
             return;
         }
-
-        navigate(`/editor/${roomId}`, {
+        
+        navigate(`/editor/${roomId}/${urlencodedMovie}`, {
             state: {
                 username,
             },
