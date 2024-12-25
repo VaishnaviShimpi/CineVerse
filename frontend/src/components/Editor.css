@@ -54,17 +54,17 @@
 }
 
 .copyBtn {
-  background-color: #f81d1d;
+  background-color: gray;
   color: #fff;
 }
 
 .leaveBtn {
-  background-color: #f81d1d;
+  background-color: gray;
   color: #fff;
 }
 
 .recommendbtn {
-  background-color: #f81d1d;
+  background-color: gray;
   color: #fff;
 }
 
@@ -90,6 +90,8 @@
 }
 .sendButton {
   margin-left: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
   background-color: #f81d1d;
   color: #fff;
 }

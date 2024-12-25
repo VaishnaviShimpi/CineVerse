@@ -37,28 +37,28 @@ const SearchPage = () => {
 	return (
 		<div className='bg-black min-h-screen text-white'>
 			<Navbar />
-			<div className='container mx-auto px-4 py-8'>
+			<div className='container mt-6 mx-auto px-4 py-8'>
 				<div className='flex justify-center gap-3 mb-4'>
 					<button
 						className={`py-2 px-4 rounded ${
-							activeTab === "movie" ? "bg-red-600" : "bg-gray-800"
-						} hover:bg-red-700`}
+							activeTab === "movie" ? "bg-[#ffbe0b]" : "bg-gray-800"
+						} hover:bg-[#ffbe0b]`}
 						onClick={() => handleTabClick("movie")}
 					>
 						Movies
 					</button>
 					<button
 						className={`py-2 px-4 rounded ${
-							activeTab === "tv" ? "bg-red-600" : "bg-gray-800"
-						} hover:bg-red-700`}
+							activeTab === "tv" ? "bg-[#ffbe0b]" : "bg-gray-800"
+						} hover:bg-[#ffbe0b]`}
 						onClick={() => handleTabClick("tv")}
 					>
 						TV Shows
 					</button>
 					<button
 						className={`py-2 px-4 rounded ${
-							activeTab === "person" ? "bg-red-600" : "bg-gray-800"
-						} hover:bg-red-700`}
+							activeTab === "person" ? "bg-[#ffbe0b]" : "bg-gray-800"
+						} hover:bg-[#ffbe0b]`}
 						onClick={() => handleTabClick("person")}
 					>
 						Person
@@ -73,7 +73,7 @@ const SearchPage = () => {
 						placeholder={"Search for a " + activeTab}
 						className='w-full p-2 rounded bg-gray-800 text-white'
 					/>
-					<button className='bg-red-600 hover:bg-red-700 text-white p-2 rounded'>
+					<button className='bg-[#ffbe0b] hover:bg-[#ffbe0b] text-white p-2 rounded'>
 						<Search className='size-6' />
 					</button>
 				</form>

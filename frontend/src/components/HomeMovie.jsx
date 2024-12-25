@@ -29,13 +29,14 @@ const HomeMovie = () => {
                 {`
                     .formWrapper {
                         background-color: rgba(0, 0, 0, 0);
-                        padding: 20px;
+                        padding: 40px;
+                        width: 50%;
                         border-radius: 8px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
                     }
                     .inputBox {
                         width: 100%;
-                        padding: 8px;
+                        padding: 12px;
                         margin: 8px 0;
                         border-radius: 4px;
                         border: 1px solid #666;
@@ -43,8 +44,16 @@ const HomeMovie = () => {
                         color: black;
                     }
                     .searchBtn {
-                        background-color: red;
-                        color: white;
+                        background-color: #ffbe0b;
+                        color: black;
+                        padding: 10px 16px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        font-weight: bold;
+                    }
+                    .searchBtn:hover {
+                        background-color: #ffae00;
                     }
                     .createNewBtn {
                         color: #007bff;

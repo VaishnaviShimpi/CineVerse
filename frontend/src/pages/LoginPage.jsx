@@ -21,7 +21,7 @@ const LoginPage = () => {
 				</Link>
 			</header>
 
-			<div className='flex justify-center items-center mt-20 mx-3'>
+			<div className='flex justify-center items-center mt-9 mx-3'>
 				<div className='w-full max-w-md p-8 space-y-6 bg-black/60 rounded-lg shadow-md'>
 					<h1 className='text-center text-white text-2xl font-bold mb-4'>Login</h1>
 
@@ -55,17 +55,17 @@ const LoginPage = () => {
 						</div>
 
 						<button
-							className='w-full py-2 bg-red-600 text-white font-semibold rounded-md
-							hover:bg-red-700
-						'
+							className='w-full py-2 text-white font-semibold rounded-md' 
 							disabled={isLoggingIn}
+							style={{ backgroundColor: "#ffbe0b", fontSize: "1.1rem"}} 
 						>
 							{isLoggingIn ? "Loading..." : "Login"}
 						</button>
 					</form>
 					<div className='text-center text-gray-400'>
 						Don't have an account?{" "}
-						<Link to={"/signup"} className='text-red-500 hover:underline'>
+						<Link to={"/signup"} className='hover:underline'
+						style={{ color: "#ffbe0b", fontSize: "1.1rem"}} >
 							Sign Up
 						</Link>
 					</div>

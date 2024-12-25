@@ -15,8 +15,12 @@ const AuthScreen = () => {
 		<div className='hero-bg relative'>
 			{/* Navbar */}
 			<header className='max-w-6xl mx-auto flex items-center justify-between p-4 pb-10'>
-				<img src='/logo.png' alt='Netflix Logo' className='w-32 md:w-52' />
-				<Link to={"/login"} className='text-white bg-red-600 py-1 px-2 rounded'>
+				<img src='/logo.png' alt='Netflix Logo' className='w-40 md:w-60' /> {/* Increased logo size */}
+				<Link
+					to={"/login"}
+					className='text-white py-2 px-4 rounded-lg font-semibold'
+					style={{ backgroundColor: "#ffbe0b", fontSize: "1.1rem" , padding: "15px"}} // Updated button styling
+				>
 					Sign In
 				</Link>
 			</header>
@@ -65,24 +69,22 @@ const AuthScreen = () => {
 					<div className='flex-1 relative'>
 						<div className='relative'>
 							<img src='/MultipleDevice.png' alt='img' className='mt-4' />
-					</div>
+						</div>
 					</div>
 
 					{/* right side */}
-
 					<div className='flex-1 md:text-left text-center'>
 						<h2 className='text-4xl md:text-5xl font-extrabold mb-4 text-balance'>
-						Watch on Any Device, Anywhere!
+							Watch on Any Device, Anywhere!
 						</h2>
 						<p className='text-lg md:text-xl'>
-						Stream seamlessly on your phone, tablet, or TV - your entertainment, your way.
+							Stream seamlessly on your phone, tablet, or TV - your entertainment, your way.
 						</p>
 					</div>
 				</div>
 			</div>
 
 			{/* separator */}
-
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
 			{/* 3rd section */}
@@ -92,7 +94,7 @@ const AuthScreen = () => {
 					<div className='flex-1 text-center md:text-left'>
 						<h2 className='text-4xl md:text-5xl font-extrabold mb-4'>Watch. Chat. Celebrate. Together.</h2>
 						<p className='text-lg md:text-xl'>
-						Enjoy movies and shows in perfect sync with friends, no matter the distance. Chat, react, and make memories together in real time!
+							Enjoy movies and shows in perfect sync with friends, no matter the distance. Chat, react, and make memories together in real time!
 						</p>
 					</div>
 
