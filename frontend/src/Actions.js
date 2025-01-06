@@ -2,11 +2,11 @@ const ACTIONS = {
     JOIN: 'join',
     JOINED: 'joined',
     DISCONNECTED: 'disconnected',
-    SEND_MESSAGE: 'send-message',
-    RECEIVE_MESSAGE: 'receive-message',
-    // Emoji Actions
-    SEND_EMOJI: 'send-emoji',
-    RECEIVE_EMOJI: 'receive-emoji',
+    SEND_MESSAGE: 'send_message',
+    RECEIVE_MESSAGE: 'receive_message',
+    SEND_EMOJI: 'send_emoji',
+    RECEIVE_EMOJI: 'receive_emoji',
+    SYNC: 'sync', // For video synchronization
 };
 
-export default ACTIONS;  
+export default ACTIONS;
