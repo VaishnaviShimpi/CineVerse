@@ -102,8 +102,13 @@
   height: 100%; /* Takes the full height of its parent */
 }
 
+#ytplayer {
+  height: 100%;
+  flex: 1;
+}
 .videoIframe {
   width: 100%; /* Makes the iframe take the full width of the container */
   height: 100%; /* Makes the iframe take the full height of the container */
   border: none; /* Removes the border around the iframe */
 }
+

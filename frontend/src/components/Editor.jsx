@@ -21,7 +21,7 @@ const Editor = () => {
     const [movieKey, setMovieKey] = useState('');
 
     const urlencodedMovie = encodeURIComponent(movieName);
-    
+
 
     useEffect(() => {
         const getId = async () => {
@@ -42,7 +42,7 @@ const Editor = () => {
                     try {
                         const { data } = await axios.get(`/api/v1/watch/key/${id}`);
                         const movieKey = data.content?.key;
-    
+
                         if (movieKey) {
                             setMovieKey(movieKey);
                             break; // Exit the loop if a valid key is found
@@ -60,12 +60,12 @@ const Editor = () => {
                 console.error("Unexpected error in getKey:", error);
             }
         };
-    
+
         if (movieIds.length > 0) {
             getKey();
         }
     }, [movieIds]);
-    
+
 
 
 
